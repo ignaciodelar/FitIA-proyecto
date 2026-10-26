@@ -1,0 +1,16 @@
+{
+  "name": "fitia-entrenador-personal-inteligente",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FitIA: aplicación académica que genera rutinas personalizadas usando Gemini en un backend de Vercel.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check app.js && node --check api/generate.js && node --check api/health.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0"
+  }
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FitIA genera propuestas de entrenamiento personalizadas con Inteligencia Artificial.">
+  <title>FitIA — Entrenador Personal Inteligente</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="FitIA, inicio">
+        <span class="brand-mark" aria-hidden="true">F<span>+</span></span>
+        <span class="brand-name">Fit<span>IA</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#crear-rutina">Crear rutina</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Activar modo oscuro" aria-pressed="false">🌙 <span>Modo oscuro</span></button>
+        <a class="nav-cta" href="#crear-rutina">Crear rutina</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-dot"></span> ENTRENAMIENTO PERSONALIZADO</div>
+          <h1>Armá una rutina<br><span>a tu medida.</span></h1>
+          <p class="hero-lead">Elegí tu objetivo, tu nivel y el tiempo disponible. FitIA usa inteligencia artificial para generar una propuesta según tus preferencias.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#crear-rutina">Crear una rutina</a>
+            <a class="text-link" href="#como-funciona">Ver cómo funciona ↓</a>
+          </div>
+          <div class="hero-note"><span class="shield-icon" aria-hidden="true">✓</span> La propuesta es orientativa y no sustituye asesoramiento profesional.</div>
+        </div>
+      </section>
+
+      <section class="steps-section" id="como-funciona">
+        <div class="section-heading">
+          <div><span class="section-kicker">CÓMO FUNCIONA</span>
+          <h2>Solo tenés que elegir<br>tus preferencias.</h2></div>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-num">01</span><div class="step-symbol">◎</div><h3>Definí tu objetivo</h3><p>Elegí qué querés trabajar en esta etapa.</p></article>
+          <article class="step-card"><span class="step-num">02</span><div class="step-symbol">⌂</div><h3>Elegí tu espacio</h3><p>Entrená en casa o en el gimnasio.</p></article>
+          <article class="step-card"><span class="step-num">03</span><div class="step-symbol">↗</div><h3>Marcá tu nivel</h3><p>La propuesta considera tu experiencia.</p></article>
+          <article class="step-card"><span class="step-num">04</span><div class="step-symbol">◷</div><h3>Reservá tu tiempo</h3><p>20, 45 o 60 minutos para moverte.</p></article>
+          <article class="step-card"><span class="step-num">05</span><div class="step-symbol">✳</div><h3>Generá tu plan</h3><p>Gemini crea una propuesta según tus datos.</p></article>
+        </div>
+      </section>
+
+      <section class="builder-section" id="crear-rutina">
+        <div class="builder-intro">
+          <span class="section-kicker">GENERADOR DE RUTINAS</span>
+          <h2>Contanos un poco<br>sobre tu <em>entrenamiento.</em></h2>
+          <p>Con tus respuestas, Gemini genera una propuesta nueva. Revisá que los ejercicios se adapten a tu situación antes de realizarlos.</p>
+          <div class="trust-note"><span aria-hidden="true">✓</span><div><strong>La rutina toma en cuenta tus opciones.</strong><br><small>Por ejemplo, el equipamiento que tengas y el tiempo disponible.</small></div></div>
+        </div>
+
+        <div class="form-panel">
+          <div class="panel-top"><div><span class="panel-kicker">CONFIGURACIÓN</span><h3>Tu perfil de entrenamiento</h3></div><span class="panel-index">FITIA / 01</span></div>
+          <form id="routine-form">
+            <div class="field-grid">
+              <div class="field full-field">
+                <label for="goal">¿Cuál es tu objetivo?</label>
+                <select id="goal" name="goal" required>
+                  <option value="">Elegí un objetivo</option>
+                  <option value="muscle">Ganar masa muscular</option>
+                  <option value="endurance">Mejorar la resistencia</option>
+                  <option value="active">Mantenerse activo</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="place">¿Dónde vas a entrenar?</label>
+                <select id="place" name="place" required>
+                  <option value="">Elegí un lugar</option>
+                  <option value="home">En casa</option>
+                  <option value="gym">En gimnasio</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="level">¿Cuál es tu experiencia?</label>
+                <select id="level" name="level" required>
+                  <option value="">Elegí tu nivel</option>
+                  <option value="beginner">Principiante</option>
+                  <option value="intermediate">Intermedio</option>
+                  <option value="advanced">Avanzado</option>
+                </select>
+              </div>
+              <fieldset class="field full-field fieldset-reset">
+                <legend>¿Cuánto tiempo tenés por sesión?</legend>
+                <div class="choice-row">
+                  <label class="choice-card"><input type="radio" name="duration" value="20" required><span class="choice-main">20 <small>min</small></span><span class="choice-sub">Rápido</span></label>
+                  <label class="choice-card"><input type="radio" name="duration" value="45"><span class="choice-main">45 <small>min</small></span><span class="choice-sub">Completo</span></label>
+                  <label class="choice-card"><input type="radio" name="duration" value="60"><span class="choice-main">60 <small>min</small></span><span class="choice-sub">Extendido</span></label>
+                </div>
+              </fieldset>
+              <div class="field full-field">
+                <label for="equipment">¿Qué equipamiento tenés disponible?</label>
+                <select id="equipment" name="equipment" required>
+                  <option value="">Elegí el equipamiento</option>
+                  <option value="none">Sin equipamiento</option>
+                  <option value="dumbbells">Mancuernas</option>
+                  <option value="full">Equipamiento completo</option>
+                </select>
+              </div>
+              <div class="field full-field">
+                <label for="limitations">Limitaciones o consideraciones <span class="optional">Opcional</span></label>
+                <textarea id="limitations" name="limitations" rows="3" maxlength="500" placeholder="Por ejemplo: prefiero ejercicios de bajo impacto. No incluyas información médica privada."></textarea>
+                <small class="field-help">No ingreses datos personales sensibles. Si tenés una lesión o condición médica, consultá con un profesional antes de entrenar.</small>
+              </div>
+            </div>
+            <button class="button button-primary generate-button" type="submit" id="generate-button"><span class="button-label">Generar mi rutina</span><span aria-hidden="true">↗</span></button>
+            <p class="privacy-copy"><span aria-hidden="true">▣</span> Tus preferencias se envían al backend para solicitar la respuesta de Gemini. No se crea una cuenta ni se guarda un historial.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="result-section" id="result-section" hidden aria-live="polite">
+        <div class="result-header"><div><span class="section-kicker">RESULTADO</span><h2>Tu rutina</h2></div><span class="ai-pill"><span class="pulse-dot"></span> Generada con Gemini</span></div>
+        <div id="status-message" class="status-message" role="status"></div>
+        <article class="result-card" id="result-card" hidden>
+          <div class="result-card-head"><span class="result-icon">F<span>+</span></span><div><span class="section-kicker">FITIA / PLAN PERSONALIZADO</span><h3>Tu propuesta de entrenamiento</h3></div></div>
+          <div class="routine-output" id="routine-output"></div>
+          <div class="result-footer"><span>Recordá adaptar la propuesta a tu condición individual.</span><button class="button button-outline" type="button" id="print-button">Imprimir / Guardar PDF ↗</button></div>
+        </article>
+      </section>
+
+      <section class="disclaimer-section">
+        <div class="disclaimer-mark">!</div><div><strong>Información importante</strong><p>FitIA ofrece orientación general para actividad física. No realiza evaluaciones médicas ni reemplaza a un profesional. Detené el ejercicio ante dolor, mareo o malestar y buscá orientación profesional cuando corresponda.</p></div>
+      </section>
+    </main>
+
+    <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">F</span><span class="brand-name">FitIA</span></a><p>FitIA · Proyecto académico de Inteligencia Artificial · 2026</p><a href="#inicio" class="back-top">Volver arriba ↑</a></footer>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
